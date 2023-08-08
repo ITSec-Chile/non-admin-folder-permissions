@@ -1,7 +1,3 @@
-param (
-    [string]$specificUser = "noble"
-)
-
 function CheckAdminFoldersPermissions {
     # Obtener la lista de servicios y sus rutas (PathName)
     $services = Get-WmiObject Win32_Service | Select-Object DisplayName, PathName
@@ -21,7 +17,7 @@ function CheckAdminFoldersPermissions {
                         $permissions = $_.FileSystemRights
                         $permissionString = [System.Security.AccessControl.FileSystemRights]$permissions
                         Write-Host "Carpeta: '$path' --- Servicio: $($service.DisplayName)"
-                        Write-Host "   Permiso de ${specificUser} en la carpeta: $permissionString"
+                        Write-Host "   Permiso de Usuarios no admin en la carpeta: $permissionString"
                         
                     }
                 }
@@ -31,6 +27,6 @@ function CheckAdminFoldersPermissions {
         }
     }
 }
-Write-Host "Usuario no Admin: ${specificUser}"
-Write-Host "Este Usuario no administrador puede acceder a los siguientes servicios:"
+
+Write-Host "Los Usuarios no administradores puede acceder a los siguientes servicios:"
 CheckAdminFoldersPermissions

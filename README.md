@@ -14,6 +14,7 @@ Ejecutar powershell como administrador y correr el script:
 
 Ejemplo:
 Dentro de un equipo se tiene al usuario "noble", perteneciente al grupo de usuarios no administradores llamados "Users"
+
 ![image](https://github.com/ITSec-Chile/non-admin-folder-permissions/assets/43393014/14171fea-2783-42f7-8ac7-270dd29591e1)
 
 Modificamos los permisos del grupo de usuario en el archivo "C:\Program Files\Windows Media Player\wmpnetwk.exe" con el siguiente comando:

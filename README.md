@@ -5,7 +5,7 @@ Para habilitar la ejecucion de scripts:
 Set-ExecutionPolicy Bypass -Scope Process
 ```
 
-Correr powershell como administrador y correr el script:
+Ejecutar powershell como administrador y correr el script:
 ```
 ./verificador.ps1
 ```
